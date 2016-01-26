@@ -32,7 +32,10 @@ function S3Storage (opts) {
   if (!opts.secretAccessKey) throw new Error('secretAccessKey is required')
   if (!opts.accessKeyId) throw new Error('accessKeyId is required')
   if (!opts.region) throw new Error('region is required')
-
+  if (!opts.ACL) {
+    opts.ACL = 'private';
+  }
+  
   var s3cfg = extend(opts, { apiVersion: '2006-03-01' })
 
   delete s3cfg.bucket
@@ -56,6 +59,7 @@ S3Storage.prototype._handleFile = function (req, file, cb) {
         Bucket: that.options.bucket,
         Key: key,
         ContentType: contentType,
+        ACL: that.options.ACL,
         Body: (_stream || file.stream)
       })
 
