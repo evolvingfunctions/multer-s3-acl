@@ -55,9 +55,15 @@ S3Storage.prototype._handleFile = function (req, file, cb) {
       if (err) return cb(err)
 
       var currentSize = 0
+      var filePath = that.options.dirname + '/' + key;
+
+      if (!that.options.dirname) {
+      var filePath = key;
+      }
+      
       var upload = that.s3.upload({
         Bucket: that.options.bucket,
-        Key: key,
+        Key: filePath,
         ContentType: contentType,
         ACL: that.options.ACL,
         Body: (_stream || file.stream)
