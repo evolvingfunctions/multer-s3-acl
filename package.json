@@ -1,6 +1,6 @@
 {
-  "name": "multer-s3",
-  "version": "1.4.1",
+  "name": "multer-s3-acl",
+  "version": "1.0.3",
   "description": "Streaming multer storage engine for AWS S3",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/badunk/multer-s3.git"
+    "url": "git+https://github.com/evolvingfunctions/multer-s3-acl.git"
   },
   "keywords": [
     "multer",
@@ -16,25 +16,25 @@
     "amazon",
     "aws"
   ],
-  "author": "badunk",
+  "author": "evolvingfunctions",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/badunk/multer-s3/issues"
+    "url": "https://github.com/evolvingfunctions/multer-s3-acl/issues"
   },
-  "homepage": "https://github.com/badunk/multer-s3#readme",
+  "homepage": "https://github.com/evolvingfunctions/multer-s3-acl#readme",
   "dependencies": {
-    "aws-sdk": "^2.2.16",
-    "file-type": "^3.3.0",
+    "aws-sdk": "^2.7.20",
+    "file-type": "^3.9.0",
     "xtend": "^4.0.1"
   },
   "devDependencies": {
-    "chai": "^3.1.0",
-    "express": "^4.13.1",
+    "chai": "^3.5.0",
+    "express": "^4.14.0",
     "mkdirp": "^0.5.1",
-    "mocha": "^2.2.5",
-    "multer": "^1.0.0",
-    "rimraf": "^2.4.1",
-    "s3rver": "0.0.5",
-    "supertest": "^1.0.1"
+    "mocha": "^2.5.3",
+    "multer": "^1.2.1",
+    "rimraf": "^2.5.4",
+    "s3rver": "0.0.12",
+    "supertest": "^1.2.0"
   }
 }
